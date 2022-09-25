@@ -26,7 +26,7 @@
     - Hindley–Milner type system?
     - Generic types? Parameterized types?
     - Dependent types?
-        - Aiming for types that are so powerful you can prove mathematical theorems with morph
+        - Aiming for types that are so powerful you can prove mathematical theorems with `morph`
         - `forall`, `there exists`
 - Evaluation Strategy
     - Everything is an expression
@@ -49,7 +49,7 @@
 - Metaprogramming
     - AST-based macros
 - Backend
-    - LLVM?
+    - LLVM
 - Formal verification?
 
 ### Interesting Stuff to Look Into
@@ -63,6 +63,26 @@
 - [Idris](https://github.com/idris-lang/Idris2)
 
 ### Standard Library
+
+- Implicitly imported
+
+#### Functions
+
+- `all()`: Do all elements satisfy a condition?
+- `any()`: Does any element satisfy a predicate?
+- `map()`
+- `reduce()`
+- `filter()`
+- `max()`
+- `min()`
+- `reverse()`
+- `sum()`
+- `zip()`
+
+#### Types
+
+1. List (+, append, [], all, any, filter, foreach, indexOf, join, len)
+2. 
 
 #### Abstract Algebra
 
