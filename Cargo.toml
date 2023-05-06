@@ -2,5 +2,20 @@
 name = "morph"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
+regex = "1"
+lalrpop-util = { version = "0.20.0", features = ["lexer"] }
+
+[build-dependencies]
+lalrpop = "0.20.0"
+
+[dev-dependencies]
+insta = { version = "1.29.0", features = ["yaml"] }
+
+[profile.dev.package.insta]
+opt-level = 3
+
+[profile.dev.package.similar]
+opt-level = 3

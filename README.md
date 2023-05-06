@@ -1,8 +1,17 @@
 ## morph
 
-> I'll morph to someone else \
-> I'm just a ghost \
-> ~ TØP
+### Steps
+
+- [ ] Lexer
+- [ ] Parser
+- [ ] Semantic Analyzer
+- [ ] IR Lowering
+    - [ ] Type Checking & Inference
+    - [ ] Desugaring
+- [ ] LLVM IR Code Generation
+- [ ] Build Binary
+
+### Random Thoughts
 
 - Paradigm: Mostly pure functional programming language
     - `impure` blocks, like Rust's `unsafe`, for now
@@ -32,6 +41,7 @@
     - Everything is an expression
     - Lazy execution
     - Generators?
+    - Zero cost abstractions
     - Implicit parallelism
         - Expressions are thread-safe
         - Static cost estimation
@@ -51,16 +61,6 @@
 - Backend
     - LLVM
 - Formal verification?
-
-### Interesting Stuff to Look Into
-
-- [Language Design](https://cs.lmu.edu/~ray/notes/languagedesignnotes/)
-- [Skip](http://skiplang.com/)
-- [Ponylang](https://www.ponylang.io/)
-- [Gluon](https://github.com/gluon-lang/gluon)
-- [Coq](https://coq.inria.fr/)
-- [Kind](https://github.com/Kindelia/Kind)
-- [Idris](https://github.com/idris-lang/Idris2)
 
 ### Standard Library
 
