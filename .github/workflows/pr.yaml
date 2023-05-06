@@ -1,0 +1,23 @@
+name: Lint and Test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint_and_test:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    container:
+      image: xd009642/tarpaulin:develop-nightly
+      options: --security-opt seccomp=unconfined
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Lint
+        run: cargo fmt --all -- --check
+
+      - name: Test
+        run: |
+          cargo +nightly tarpaulin --verbose --all-features --workspace --timeout 120 --out Xml
