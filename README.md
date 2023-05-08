@@ -27,7 +27,7 @@
 - Type System
     - Types are first class citizens like in Idris
     - Statically typed
-    - Strongly typed?
+    - `let` -> implicit annotation of mutability
     - Algebraic types (sum & product types)
     - `unit` i.e. `()`
     - No null pointers, Haskell's `Maybe<T>`.. `Some<T>` or `None`
@@ -50,6 +50,11 @@
 - Control Flow
     - Pattern Matching
         - Match blocks, like Rust's
+    - Break
+        - `break`
+        - `break ~N` -> Break `N`th outermost loop
+    - Range
+        - `for (x in start..stop,step) {}`
 - Memory management
     - Rust's ownership model?
     - Garbage collection?
@@ -81,8 +86,22 @@
 
 #### Types
 
-1. List (+, append, [], all, any, filter, foreach, indexOf, join, len)
-2. 
+##### "Abstract"
+
+1. Iterable (list, set, tuple): Sized
+2. Mapping (dict)
+3. Numeric (int, float, complex?)
+4. Abstract Base Class
+5. Generics
+
+
+##### "Concrete"
+
+1. str, bytes
+2. List (+, append, [], all, any, filter, foreach, indexOf, join, len)
+3. Union (| -> sugar), Maybe<T> => Union<T, None>
+4. Callable<<T, ...>, T>
+5. Self
 
 #### Abstract Algebra
 
